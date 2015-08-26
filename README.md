@@ -152,8 +152,12 @@ screenshot
  ```
  screenshot
 -------------------------------------------------------------------
-![](http://image.baidu.com/search/detail?ct=503316480&z=undefined&tn=baiduimagedetail&ipn=d&word=%E9%B8%A3%E4%BA%BAgif&step_word=&ie=utf-8&in=&cl=2&lm=-1&st=undefined&cs=3674377005,3369026100&os=3072376110,3228547626&pn=9&rn=1&di=81814681190&ln=436&fr=ala&fmq=1440584733508_R&ic=undefined&s=undefined&se=&sme=&tab=0&width=&height=&face=undefined&is=0,0&istype=0&ist=&jit=&bdtype=0&gsm=0&objurl=http%3A%2F%2Fimg4q.duitang.com%2Fuploads%2Fitem%2F201207%2F20%2F20120720204610_BnAkT.gif)
- 
+![](http://img4q.duitang.com/uploads/item/201207/20/20120720204610_BnAkT.gif)
+
+thanks
+===========================================================================================================
+  [okhttp](https://github.com/square/okhttp) 
+  [glide](https://github.com/bumptech/glide)
 
  
 
