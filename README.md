@@ -48,9 +48,43 @@ HTTP
                  */
             }
         });
- ```       
- (2)How to use POST obtain String or Object
- --------------------------------------------------------------------------------------------------------------------------------------
+        
+     /**
+     * get 请求
+     * @param url
+     * @param listener
+     */
+    public static void get(String url,CallbackListener<?> listener)
+    {
+        getInstance().baseGet(url, listener);
+    }
+ ```
+ 
+(2)How to use POST obtain String or Object
+--------------------------------------------------------------------------------------------------
+```java
+ Map<String, String> map = new HashMap<>();
+ map.put("key", "7c0fca271915eee1061ab9410352fc26");
+ map.put("postcode", "215001");
+ Http.post("http://v.juhe.cn/postcode/query", map, new CallbackListener<String>() { //这里直接返回String,也可以返回对象，用法和get的一样，就是post有个参数而已
+            @Override
+            public void onSuccess(String result) {
+                Log.i("cjj", "onSuccess---" + result);
+                tv_get_string.setText("getString------->" + result);
+            }
+ });
+ 
+    /**
+     * post 请求
+     * @param url
+     * @param params
+     * @param listener
+     */
+    public static void post(String url,Map<String,String>params,CallbackListener<?> listener)
+    {
+        getInstance().basePost(url, params, listener);
+    }
+ ```
  
 
  
