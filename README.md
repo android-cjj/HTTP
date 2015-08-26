@@ -7,11 +7,11 @@ HTTP
  it is Fast and efficient,also save time.the frame based on the okhttp link 
  {https://github.com/square/okhttp} and glide link {https://github.com/bumptech/glide}
  
- How to I use HTTP
+ How do I use HTTP ?
  =============================================================================
  
  How to use GET obtain String or Object
- -------------------------------------------------------------------------------------------
+-------------------------------------------------------------
  ```java
         /**
          * get 中的两个参数 一个url,一个回调监听 监听中可以重写
