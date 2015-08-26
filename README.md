@@ -66,8 +66,9 @@ HTTP
  Map<String, String> map = new HashMap<>();
  map.put("key", "7c0fca271915eee1061ab9410352fc26");
  map.put("postcode", "215001");
- Http.post("http://v.juhe.cn/postcode/query", map, new CallbackListener<String>() { //这里直接返回String,也可以返回对象，用法和get的一样，就是post有个参数而已
-            @Override
+ Http.post("http://v.juhe.cn/postcode/query", map, new CallbackListener<String>() {
+      //这里直接返回String,也可以返回对象，用法和get的一样，就是post有个参数而已
+        @Override
             public void onSuccess(String result) {
                 Log.i("cjj", "onSuccess---" + result);
                 tv_get_string.setText("getString------->" + result);
@@ -115,6 +116,45 @@ HTTP
         getInstance().baseDownload(url, savePath, listener);
     }
  ```
+ (4) How to display images for the web
+----------------------------------------------------------
+```java
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_net_img);
+        iv = (ImageView) this.findViewById(R.id.iv);
+        iv_static = (ImageView) this.findViewById(R.id.iv_static);
+        Http.displayImage(this,iv_static,
+        "http://img4.duitang.com/uploads/blog/201406/04/20140604162508_dtMtN.thumb.700_0.jpeg");
+        
+        Http.displayImage(DisplayNetImageActivity.this,iv,
+       "http://img4q.duitang.com/uploads/item/201207/20/20120720203027_cJHZT.gif");
+    }
+ ```
+screenshot
+-------------------------------------------------------------------
+![](http://img4.duitang.com/uploads/blog/201406/04/20140604162508_dtMtN.thumb.700_0.jpeg)
+![](http://img4q.duitang.com/uploads/item/201207/20/20120720203027_cJHZT.gif)
+
+(5)How to show local pictures
+-----------------------------------------------
+```java
+ @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_net_img);
+        iv = (ImageView) this.findViewById(R.id.iv);
+        iv_static = (ImageView) this.findViewById(R.id.iv_static);
+        Http.displayLocalImage(this,iv_static,R.drawable.b);
+        Http.displayLocalImage(DisplayLocalImageActivity.this, iv, R.drawable.a);
+    }
+ ```
+ screenshot
+-------------------------------------------------------------------
+![](http://image.baidu.com/search/detail?ct=503316480&z=undefined&tn=baiduimagedetail&ipn=d&word=%E9%B8%A3%E4%BA%BAgif&step_word=&ie=utf-8&in=&cl=2&lm=-1&st=undefined&cs=3674377005,3369026100&os=3072376110,3228547626&pn=9&rn=1&di=81814681190&ln=436&fr=ala&fmq=1440584733508_R&ic=undefined&s=undefined&se=&sme=&tab=0&width=&height=&face=undefined&is=0,0&istype=0&ist=&jit=&bdtype=0&gsm=0&objurl=http%3A%2F%2Fimg4q.duitang.com%2Fuploads%2Fitem%2F201207%2F20%2F20120720204610_BnAkT.gif)
+ 
+
  
 
  
