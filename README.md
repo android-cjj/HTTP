@@ -8,7 +8,7 @@ HTTP
  {https://github.com/square/okhttp} and glide link {https://github.com/bumptech/glide}
  
  How do I use HTTP ?
- =============================================================================
+======================================================================
  
  How to use GET obtain String or Object
 -------------------------------------------------------------
