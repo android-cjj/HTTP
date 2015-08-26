@@ -86,5 +86,35 @@ HTTP
     }
  ```
  
+ （3）How to download from the Internet
+-------------------------------
+```java
+ Http.download("http://zhstatic.zhihu.com/pkg/store/daily/zhihu-daily-zhihu-2.5.2(382).apk",
+                sdpath, new CallbackListener<String>() {
+                    @Override
+                    public void onDownloadFinish(String path) {  //下载完成 返回下载文件的绝对路径
+                        super.onDownloadFinish(path);
+                        Log.i("cjj", "onDown---" + path); //非线程ui
+                    }
+
+                    @Override
+                    public void onDownloadProgress(int progress) { //下载进度回调
+                        super.onDownloadProgress(progress);
+                        Log.i("cjj", "onDownprogress---" + progress);//非线程ui
+                    }
+                });
+                
+     /**
+     * 下载
+     * @param url 下载的url
+     * @param savePath 保存的路径
+     * @param listener 回调
+     */
+    public static void download(String url,String savePath,CallbackListener<?> listener)
+    {
+        getInstance().baseDownload(url, savePath, listener);
+    }
+ ```
+ 
 
  
