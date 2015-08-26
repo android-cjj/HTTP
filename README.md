@@ -13,13 +13,14 @@ HTTP
  How to use GET obtain String or Object
 -------------------------------------------------------------
  ```java
-        /**
-         * get 中的两个参数 一个url,一个回调监听 监听中可以重写
-         * onSuccess(String result)【回调成功】， onError(Exception e)【回调失败】 onStringResult(Stringresult)【打印string】
-         */
-        Http.get("https://www.baidu.com/", new CallbackListener<String>() {
-            @Override
-            public void onSuccess(String result) {
+ /**
+ * get 中的两个参数 一个url,一个回调监听 监听中可以重写
+ * onSuccess(String result)【回调成功】， onError(Exception e)【回调失败】 
+ *onStringResult(Stringresult)【打印string】
+ */
+ Http.get("https://www.baidu.com/", new CallbackListener<String>() {
+         @Override
+         public void onSuccess(String result) {
                 Log.i("cjj", "onSuccess---" + result);
                 tv_get_string.setText("getString------->" + result);
             }
