@@ -156,8 +156,10 @@ screenshot
 
 thanks
 ===========================================================================================================
-  [okhttp](https://github.com/square/okhttp) 
-  [glide](https://github.com/bumptech/glide)
+ [okhttp](https://github.com/square/okhttp)
+-----------------------------
+[glide](https://github.com/bumptech/glide)
+--------------
 
  
 
